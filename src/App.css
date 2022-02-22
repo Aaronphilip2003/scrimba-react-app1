@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -35,4 +36,46 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.nav-bar{
+  list-style: none;
+  display: flex;
+  float:right;
+  margin-right: 50px;
+}
+
+
+.nav-bar>li{
+  padding: 10px;
+}
+
+.foot{
+  margin-left: 480px;
+  font-size: larger;
+  word-spacing:1px;
+  bottom: 0%;
+  position: fixed;
+  background-color:darkblue;
+  color: white;  
+}
+
+.MainContent{
+  margin-left: 320px;
+  margin-top: 10px;
+  width: 50%;
+  padding: 0px;
+  line-height: 3.5em;
+}
+
+#head{
+  margin-left: 300px;
+  margin-top: 50px;
+  width: 50%;
+  padding: 10px; 
+}
+
+.MainContent > li::marker{
+  font-size: 1.4em;
+  color: #61DAFB;
 }

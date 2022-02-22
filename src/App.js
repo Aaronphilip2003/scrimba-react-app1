@@ -3,11 +3,34 @@ import './App.css';
 import React from "react"
 import ReactDOM from "react-dom"
 
-function TemporaryName(){ 
+
+function Header(){
   return(
-  <div>
-  <img src={logo} width="100px"></img>
-  <h1> Fun facts about React </h1>
+    <header>
+      <nav>
+      <img src={logo} width="100px"></img>
+      </nav>
+    </header>
+  )     
+  }
+  
+function Footer() {
+  return (
+      <footer className='foot'>
+          <small>© 2022 Aaron development. All rights reserved.</small>
+      </footer>
+  )
+}
+
+function Heading(){
+  return(
+    <h1 id="head"> Fun facts about React </h1>
+  )
+}
+
+function MainContent(){ 
+  return(
+  <div className='MainContent'>
     <ul>
       <li> Was first released in 2013 </li>
       <li> Was originally created by John Walke</li>
@@ -18,11 +41,40 @@ function TemporaryName(){
   </div>
   )
 }
-  
-function App() {
-  return (
-    ReactDOM.render(<TemporaryName/>,document.getElementById("root")
-    )
-  );
+
+function NavBar(){
+  return(
+    <div>
+      <ul className='nav-bar'>
+        <li>Pricing</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+  )
 }
-export default App;
+
+function ReactPic(){
+  return(
+    <img src={logo} width="200px" className='pic'></img>
+  )
+}
+
+
+  
+function Page() {
+  return (
+    <div>
+      <Header/>
+      <NavBar/>
+      <Heading/>
+      <MainContent/>
+      <Footer/>
+      {/* <ReactPic/> */}
+    </div>
+    );
+}
+
+
+ReactDOM.render(<Page/>,document.getElementById("root"))
+export default Page;
